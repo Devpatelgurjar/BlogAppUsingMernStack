@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema({
     },
     blog:[
         {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "blog",
        },
     ]

@@ -8,9 +8,9 @@ require('dotenv').config();
 require("./Models/DB")
 const PORT = process.env.PORT||4000;
 
-//middlewares
+//middlewares 
 app.use(express.json());
-app.use(cors()); 
+app.use(cors());  
 app.use(morgan("dev"));
  
 //routes
