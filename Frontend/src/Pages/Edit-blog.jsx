@@ -111,7 +111,7 @@ const EditBlog = () => {
          required
       />
       <Button type="submit" variant="contained" color="warning" fullWidth sx={{marginTop:"1vh"}}>
-        Create Blog
+        update Blog
       </Button>
     </Box>
     </>
