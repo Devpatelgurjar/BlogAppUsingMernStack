@@ -22,7 +22,7 @@ const EditBlog = () => {
     const getSingleBlog = async () => {
         // console.log(id);
         try {
-            const data = await axios.get(`/api/v1/blog/get-blog/${id}`);
+            const data = await axios.get(`https://blogappusingmernstack-backend.onrender.com/api/v1/blog/get-blog/${id}`);
             if(data.data.success){
                 console.log(data.data.blog);
                 setBlog(data.data.blog);
@@ -44,7 +44,7 @@ const EditBlog = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const { data } = await axios.put(`/api/v1/blog/update-blog/${id}`, {
+        const { data } = await axios.put(`https://blogappusingmernstack-backend.onrender.com/api/v1/blog/update-blog/${id}`, {
           title: input.title,
           description: input.description,
           image: input.image,

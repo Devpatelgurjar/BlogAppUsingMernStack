@@ -32,7 +32,7 @@ const BlogCard = ({ title, description, image, username, time, id, isUser }) => 
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `/api/v1/blog/delete-blog/${id}`
+        `https://blogappusingmernstack-backend.onrender.com/api/v1/blog/delete-blog/${id}`
       );
       console.log(response);
       window.location.reload();

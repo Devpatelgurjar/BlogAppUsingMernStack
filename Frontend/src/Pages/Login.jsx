@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("/api/v1/user/login", formData);
+      const response = await axios.post("https://blogappusingmernstack-backend.onrender.com/api/v1/user/login", formData);
       if (!response.data.success) {
         return alert(response.data.message);
       }

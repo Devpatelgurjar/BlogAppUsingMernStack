@@ -22,7 +22,7 @@ const CreateBlog = () => {
 
   const createNewBlog = async () => {
     try {
-      const data = await axios.post("/api/v1/blog/create-blog", {
+      const data = await axios.post("https://blogappusingmernstack-backend.onrender.com/api/v1/blog/create-blog", {
         title: input.title,
         description: input.description,
         images: input.image,
