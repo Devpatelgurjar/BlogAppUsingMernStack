@@ -32,7 +32,7 @@ const BlogCard = ({ title, description, image, username, time, id, isUser }) => 
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/v1/blog/delete-blog/${id}`
+        `/api/v1/blog/delete-blog/${id}`
       );
       console.log(response);
       window.location.reload();
@@ -50,7 +50,8 @@ const BlogCard = ({ title, description, image, username, time, id, isUser }) => 
   return (
     <Card
       sx={{
-        width: { xs: "100%", sm: "90%", md: "80%", lg: "60%" }, // Responsive widths
+        bgcolor: "#E2E2E2",
+        width: { xs: "100%", sm: "90%", md: "80%", lg: "40%" }, // Responsive widths
         margin: "auto",
         mt: 2,
         p: 2,
@@ -79,15 +80,18 @@ const BlogCard = ({ title, description, image, username, time, id, isUser }) => 
         title={title}
         subheader={formatTime(time)}
       />
-      <CardMedia
-        component="img"
-        sx={{
-          height: { xs: 150, sm: 200, md: 250 }, // Adjust height based on screen size
-          objectFit: "cover",
-        }}
-        image={image}
-        alt="Blog Image"
-      />
+     <CardMedia
+       component="img"
+       sx={{
+         maxHeight: { xs: 150, sm: 200, md: 300 }, // Set maximum height
+         width: "auto", // Maintain aspect ratio
+         maxWidth: "100%", // Ensure it fits within the container
+         margin: "auto", // Center the image horizontally
+         display: "block", // Ensure proper layout
+  }}
+  image={image}
+  alt="Blog Image"
+/>
       <CardContent>
         <Typography variant="h6" color="text.primary" gutterBottom>
           Title: {title}

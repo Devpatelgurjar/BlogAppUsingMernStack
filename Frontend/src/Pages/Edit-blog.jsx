@@ -22,7 +22,7 @@ const EditBlog = () => {
     const getSingleBlog = async () => {
         // console.log(id);
         try {
-            const data = await axios.get(`http://localhost:3000/api/v1/blog/get-blog/${id}`);
+            const data = await axios.get(`/api/v1/blog/get-blog/${id}`);
             if(data.data.success){
                 console.log(data.data.blog);
                 setBlog(data.data.blog);

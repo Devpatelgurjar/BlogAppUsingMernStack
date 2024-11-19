@@ -10,7 +10,7 @@ const Blog = () => {
       const item = localStorage.getItem("userid");
       const id = JSON.stringify(item); // this method adds "" around the id so causing error in url
       console.log(id);
-      const response = await axios.get(`http://localhost:3000/api/v1/blog/user-blog/${item}`);
+      const response = await axios.get(`/api/v1/blog/user-blog/${item}`);
       console.log(response.data);
       setBlogs(response.data.userBlog.blog); 
     } catch (error) {

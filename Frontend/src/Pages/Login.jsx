@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/login", formData);
+      const response = await axios.post("/api/v1/user/login", formData);
       if (!response.data.success) {
         return alert(response.data.message);
       }
@@ -37,7 +37,7 @@ const Login = () => {
   return (
     <Box
       component="form"
-      onSubmit={handleSubmit}
+      onSubmit={handleSubmit} // login function
       sx={{
         width: { xs: "90%", sm: 400 },
         margin: "auto",
